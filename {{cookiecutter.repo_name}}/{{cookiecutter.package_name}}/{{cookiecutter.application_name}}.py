@@ -1,8 +1,22 @@
 import sys
 
 import pkg_resources
+try: # PySide2
+    from PySide2 import QtGui, QtWidgets, QtCore
+    from PySide2.QtCore import Signal, Slot
+    from PySide2.QtCore import Qt
+    from PySide2.QtWidgets import QApplication, QMainWindow
+    print("PySide2 was used")
+except ImportError: # PyQt5
+    from PyQt5 import QtGui, QtWidgets, QtCore
+    from PyQt5.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
+    from PyQt5.Qt import Qt
+    from PyQt5.QtWidgets import QApplication, QMainWindow
+    print("PyQt5 was used")
+else:
+    print('Qt for Python was not installed.')
+    exit(1)
 
-from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import (QAction, QApplication, QDesktopWidget, QDialog, QFileDialog,
                              QHBoxLayout, QLabel, QMainWindow, QToolBar, QVBoxLayout, QWidget)

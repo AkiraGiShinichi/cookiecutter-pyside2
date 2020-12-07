@@ -15,7 +15,7 @@ Features
 * Continuous integration with pre-built .travis.yml for Travis CI
 * Pre-assembled Pytest test suite with inclusion of pytest-qt and pytest-xvfb to enhance test experience
 
-Installation
+Quick Start
 ------------
 
 Prior to installing the PyQt5 cookiecutter, the cookiecutter package must be installed in the user's virtual environment. This is achieved via the following command::
@@ -24,16 +24,16 @@ Prior to installing the PyQt5 cookiecutter, the cookiecutter package must be ins
 
 With cookiecutter installed, the PyQt5 cookiecutter template can be installed with::
 
-    $ cookiecutter https://github.com/mandeep/cookiecutter-pyqt5.git
+    $ cookiecutter https://github.com/AkiraGiShinichi/cookiecutter-pyqt5.git
 
 Once cookiecutter clones the template, the user will be asked a series of questions related to their
 project::
 
-    $ full_name [Mandeep]: Enter your full name.
+    $ full_name [Akira]: Enter your full name.
 
-    $ email [info@mandeep.xyz]: Enter your email address.
+    $ email [akira@gmail.com]: Enter your email address.
 
-    $ github_username [mandeep]: Enter your github username.
+    $ github_username [akira]: Enter your github username.
 
     $ repo_name [cookiecutter-pyqt5]: Enter the name of your project's repository.
 
@@ -52,7 +52,15 @@ project::
 
     $ insert_statusbar [yes]: If you would like a movable status bar on your application, press enter or type yes.
 
-
+Once project is created, it is able to interact:
+    - Get in and create new python environment:
+    $ cd <repo_name>
+    $ python -m venv .env
+    # .env\Scripts\activate
+    - Setup pakages:
+    $ python setup.py develop
+    - Test:
+    $ python setup.py pytest
 
 Usage
 -------

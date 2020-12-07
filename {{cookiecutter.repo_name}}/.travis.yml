@@ -2,7 +2,7 @@
 
 language: python
 python:
-  - "3.4_with_system_site_packages"
+  - "3.8_with_system_site_packages"
 sudo: required
 dist: trusty
 notifications:

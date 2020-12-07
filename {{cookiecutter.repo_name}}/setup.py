@@ -2,6 +2,9 @@ from setuptools import setup
 
 requirements = [
     # TODO: put your package requirements here
+    'numpy',
+    'pyqt5',
+    'matplotlib'
 ]
 
 setup(
@@ -20,11 +23,12 @@ setup(
         ]
     },
     install_requires=requirements,
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest'],
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
     ],
 )
