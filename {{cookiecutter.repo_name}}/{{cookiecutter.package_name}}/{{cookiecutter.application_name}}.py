@@ -136,8 +136,8 @@ class AboutDialog(QDialog):
         self.setLayout(self.layout)
 
 
-def main():
-    application = QApplication(sys.argv)
+def main(args=sys.argv):
+    application = QApplication(args)
     window = {{ cookiecutter.application_title }}()
     desktop = QDesktopWidget().availableGeometry()
     width = (desktop.width() - window.width()) / 2
