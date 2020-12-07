@@ -36,6 +36,6 @@ setup(
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.8 NOT compatible',
     ],
 )
