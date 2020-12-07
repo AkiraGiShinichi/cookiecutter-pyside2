@@ -53,12 +53,15 @@ project::
     $ insert_statusbar [yes]: If you would like a movable status bar on your application, press enter or type yes.
 
 Once project is created, it is able to interact:
+
     - Get in and create new python environment:
     $ cd <repo_name>
     $ python -m venv .env
     # .env\Scripts\activate
+
     - Setup pakages:
     $ python setup.py develop
+    
     - Test:
     $ python setup.py pytest
 
