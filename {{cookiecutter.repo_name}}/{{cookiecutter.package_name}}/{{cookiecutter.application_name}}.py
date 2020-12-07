@@ -13,7 +13,7 @@ except ImportError: # PyQt5
     from PyQt5.Qt import Qt
     from PyQt5.QtWidgets import QApplication, QMainWindow
     print("PyQt5 was used")
-else:
+except ImportError:
     print('Qt for Python was not installed.')
     exit(1)
 
