@@ -3,7 +3,8 @@ from setuptools import setup
 requirements = [
     # TODO: put your package requirements here
     'pyqt5',
-    'wheel'
+    'wheel',
+    'sphinx'
 ]
 
 setup(

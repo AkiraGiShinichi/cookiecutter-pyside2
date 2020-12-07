@@ -74,6 +74,29 @@ Once project is created, it is able to interact::
 
     $ python setup.py pytest
 
+    - Make documents:
+
+    $ cd docs
+
+    $ sphinx-quickstart
+
+    $ make html
+
+    - Custom document theme:
+
+    $ pip install sphinx_rtd_theme
+
+    Update `conf.py`:
+    """python
+    import sphinx_rtd_theme
+
+    html_theme = 'sphinx_rtd_theme'
+
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    """
+
+    $ make html
+
 Usage
 -------
 
