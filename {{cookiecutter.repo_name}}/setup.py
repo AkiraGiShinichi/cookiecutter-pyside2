@@ -3,6 +3,7 @@ from setuptools import setup
 requirements = [
     # TODO: put your package requirements here
     'pyqt5',
+    'wheel'
 ]
 
 setup(
@@ -22,7 +23,14 @@ setup(
     },
     install_requires=requirements,
     setup_requires=['pytest-runner'],
-    tests_require=['pytest'],
+    tests_require=[
+        'pytest', 
+        'pytest-cov',
+        'pytest-faulthandler',
+        'pytest-mock',
+        'pytest-qt',
+        'pytest-xvfb'
+    ],
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
