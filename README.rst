@@ -62,9 +62,13 @@ Once project is created, it is able to interact::
 
     $ .env\Scripts\activate
 
-    - Setup pakages:
+    - Install requires pakages:
 
     $ python setup.py develop
+
+    - Run GUI:
+
+    $ python main.py
 
     - Test:
 

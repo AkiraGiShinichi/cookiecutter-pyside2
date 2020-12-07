@@ -2,9 +2,7 @@ from setuptools import setup
 
 requirements = [
     # TODO: put your package requirements here
-    'numpy',
     'pyqt5',
-    'matplotlib'
 ]
 
 setup(
