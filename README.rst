@@ -52,9 +52,9 @@ project::
 
     $ insert_statusbar [yes]: If you would like a movable status bar on your application, press enter or type yes.
 
-Once project is created, it is able to interact:
+Once project is created, it is able to interact::
 
-    - Jump in and create new python environment::
+    - Jump in and create new python environment:
 
     $ cd <repo_name>
 
