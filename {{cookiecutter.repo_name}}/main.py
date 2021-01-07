@@ -1,5 +1,7 @@
 import sys
 from {{cookiecutter.package_name}} import {{cookiecutter.application_name}}
+from {{cookiecutter.package_name}} import ConsoleApp
+from {{cookiecutter.package_name}} import WidgetApp
 
 
 # Back up the reference to the exceptionhook
@@ -23,5 +25,7 @@ if __name__ == '__main__':
     # Catch PyQt5 exceptions
     try:
         sys.exit({{cookiecutter.application_name}}.main())
+        # sys.exit(ConsoleApp.main())
+        # sys.exit(WidgetApp.main())
     except:
         print("Exiting")

@@ -1,5 +1,6 @@
 import sys
 
+import pkg_resources
 from PySide2 import QtGui, QtWidgets, QtCore
 from PySide2.QtCore import Signal, Slot
 from PySide2.QtCore import Qt
@@ -74,7 +75,7 @@ class {{ cookiecutter.application_title }}(QMainWindow):
         self.addToolBar(Qt.TopToolBarArea, self.tool_bar)
         self.tool_bar.setMovable(False)
 
-        open_icon = pkg_resources.resource_filename('{{ cookiecutter.package_name }}.images',
+        open_icon = pkg_resources.resource_filename('resources.images',
                                                     'ic_open_in_new_black_48dp_1x.png')
         tool_bar_open_action = QAction(QIcon(open_icon), 'Open File', self)
         tool_bar_open_action.triggered.connect(self.open_file)
@@ -99,7 +100,7 @@ class AboutDialog(QDialog):
         super(AboutDialog, self).__init__(parent)
 
         self.setWindowTitle('About')
-        help_icon = pkg_resources.resource_filename('{{ cookiecutter.package_name }}.images',
+        help_icon = pkg_resources.resource_filename('resources.images',
                                                     'ic_help_black_48dp_1x.png')
         self.setWindowIcon(QIcon(help_icon))
         self.resize(300, 200)
