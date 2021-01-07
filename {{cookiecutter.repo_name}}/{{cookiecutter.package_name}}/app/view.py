@@ -1,3 +1,4 @@
+import os
 import sys
 
 try: # PySide2
@@ -12,7 +13,7 @@ except ImportError: # PyQt5
     from PyQt5.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
     from PyQt5.Qt import Qt
     from PyQt5.QtWidgets import QApplication, QMainWindow
-    os.system('pyrcc5 resources/ui/app_resources.qrc -o app_resources_rc.py')
+    # os.system('pyrcc5 resources/ui/app_resources.qrc -o app_resources_rc.py')
     print("PyQt5 was used")
 except ImportError:
     print('Qt for Python was not installed.')
@@ -29,8 +30,8 @@ class View(QtWidgets.QWidget):
         # * Private properties
         self.isSignInTab = None
 
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint) # remove window default title bar
-        self.ui = Ui_Form_logIn()
+        # self.setWindowFlags(QtCore.Qt.FramelessWindowHint) # remove window default title bar
+        self.ui = Ui_Form()
         self.ui.setupUi(self)
 
         self.ui.pushButton.clicked.connect(self.on_pushButton_clicked)
