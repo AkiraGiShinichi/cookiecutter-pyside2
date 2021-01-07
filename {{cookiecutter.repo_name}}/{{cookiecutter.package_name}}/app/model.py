@@ -4,7 +4,7 @@ def say_hello(name):
 def say_goodbye(name):
     print(f'Goodbye {name}!')
 
-def Greeting():
+class Greeting:
     def __init__(self, name='World'):
         self.name = name
     

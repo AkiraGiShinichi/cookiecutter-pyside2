@@ -14,9 +14,9 @@ class Presenter(QtCore.QObject):
         self.model = model
         
         self.view = view_
-        self.view.pushButton_clicked.connect(self.close_window)
+        self.view.pushButton_clicked.connect(self.say)
 
-    def close_window(self):
-        self.model.goodbye('World')
+    def say(self):
+        self.model.hello()
 
     
