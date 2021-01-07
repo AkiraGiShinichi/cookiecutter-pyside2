@@ -2,7 +2,7 @@ from setuptools import setup
 
 requirements = [
     # TODO: put your package requirements here
-    'pyqt5',
+    'pyside2',
     'wheel',
     'sphinx'
 ]
@@ -14,9 +14,9 @@ setup(
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-    packages=['{{ cookiecutter.package_name }}', '{{ cookiecutter.package_name }}.images',
+    packages=['{{ cookiecutter.package_name }}', 'resources.images',
               '{{ cookiecutter.package_name }}.tests'],
-    package_data={'{{ cookiecutter.package_name }}.images': ['*.png']},
+    package_data={'resources.images': ['*.png']},
     entry_points={
         'console_scripts': [
             '{{ cookiecutter.application_title }}={{ cookiecutter.package_name }}.{{ cookiecutter.application_name }}:main'
@@ -35,7 +35,6 @@ setup(
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8 NOT compatible',
+        'Programming Language :: Python :: 3.7'
     ],
 )
