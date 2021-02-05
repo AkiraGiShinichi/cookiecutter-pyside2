@@ -24,7 +24,7 @@ Prior to installing the PyQt5 cookiecutter, the cookiecutter package must be ins
 
 With cookiecutter installed, the PyQt5 cookiecutter template can be installed with::
 
-    $ cookiecutter https://github.com/AkiraGiShinichi/cookiecutter-pyqt5.git
+    $ cookiecutter https://github.com/AkiraGiShinichi/cookiecutter-pyside2.git
 
 Once cookiecutter clones the template, the user will be asked a series of questions related to their
 project::
